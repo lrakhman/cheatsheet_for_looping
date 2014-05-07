@@ -22,20 +22,31 @@
         <td>Loop</td>
         <td>
           <h2></h2>
-          Loop:
-          <xmp>
-i = 20
-loop do
-  i -= 1
+          <p>Ruby has a basic "loop".  An explicit "break" must be added to prevent an infinite loop.</p>
 
-  print "#{i}"
+          Example:
+          <xmp>i = 20
+loop do
+  print i
   break if i <= 0
+  i -= 1
 end
 </xmp>
         </td>
 
         <td>
-          <h2>While (true)</h2>
+          <p>JavaScript does not have a basic "loop" construct, but the same result can be achieved with a "while(true)" loop.</p>
+
+          For example:
+                    <xmp>var i = 20;
+while( true ) {
+  console.log(i)
+  if (i <= 0) {
+    break
+  }
+  i -= 1;
+}
+</xmp>
         </td>
       </tr>
 
