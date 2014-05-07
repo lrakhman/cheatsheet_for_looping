@@ -9,7 +9,7 @@
   <body>
 
     <h1>Looping in Ruby and JavaScript</h1>
-    <p>Below is a comparison if the different looping constructs available in Ruby and JavaScript.</p>
+    <p>Below is a comparison of the different looping constructs available in Ruby and JavaScript.</p>
 
     <table border = "1"> <!--remove styling when CSS is added -->
       <tr>
@@ -37,7 +37,7 @@ end
         <td>
           <p>JavaScript does not have a basic "loop" construct, but the same result can be achieved with a "while(true)" loop.</p>
 
-          For example:
+          Example:
                     <xmp>var i = 20;
 while( true ) {
   console.log(i)
@@ -53,48 +53,66 @@ while( true ) {
       <tr>
         <td>While/Until</td>
         <td>
-          While
-          <xmp>
-counter = 1
+          <p>Ruby has both a "while" loop and an "until" loop.  Logically, "while(true)" is equivalent to "until(false)".  Below are some examples.</p>
+
+          While example #1:
+          <xmp>counter = 1
 while counter < 11
   puts counter
   counter += 1
 end
 </xmp>
-<!-- I like the example above better.  Thoughts?
-<xmp>
-$i = 0
-$num = 5
-begin
-   puts("Inside the loop i = #$i" )
-   $i +=1
-end while $i < $num
-</xmp> -->
 
-Until:
-<xmp>
-counter = 1
-
+Until example #1:
+<xmp>counter = 1
 until counter > 10
   puts counter
   counter += 1
 end
 </xmp>
 
-<!-- ((((((or this one)))))):
-
-<xmp>
-$i = 0
-$num = 5
+While example #2:
+<xmp>i = 0
+num = 5
 begin
-   puts("Inside the loop i = #$i" )
-   $i +=1;
-end until $i > $num
-</xmp> -->
+   puts("Inside the loop i = #{i}" )
+   i +=1
+end while i <= num
+</xmp>
+
+
+Until example #2:
+<xmp>i = 0
+num = 5
+begin
+   puts("Inside the loop i = #{i}" )
+   i +=1;
+end until i > num
+</xmp>
         </td>
 
         <td>
-          <h2>While</h2>
+          <p>JavaScript has a "while" loop but no "until" loop.  However, "until" is logically equivalent to "while(false)".</p>
+
+          While example #1:
+          <xmp>var counter = 1
+while (counter < 11) {
+  console.log(counter);
+  counter += 1;
+}
+          </xmp>
+
+          While example #2:
+          <xmp>var i = 0
+var num = 5
+do {
+  console.log("Inside the loop i = " + i);
+  i += 1;
+} while (i <= num);
+          </xmp>
+
+
+          <!-- Note: I included different examples so the code would do the same thing as the examples in the Ruby section.  Thoughts?
           <xmp>
           var loops = 0
 
@@ -114,9 +132,9 @@ end until $i > $num
           do {
              i += 1;
              document.write(i);
-          } while (i < 5);
+          } while (i < 5); 
 
-        </xmp>
+        </xmp> -->
         </td>
       </tr>
 
