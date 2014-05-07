@@ -1,42 +1,165 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cheat-Sheet for Looping in Ruby vs. JavaScript</title>
+    <title>Cheatsheet for Looping in Ruby vs. JavaScript</title>
    
   </head>
 
 
   <body>
 
-***************** JAVASCRIPT LOOPING:
+    <h1>Looping in Ruby and JavaScript</h1>
+    <p>Below is a comparison if the different looping constructs available in Ruby and JavaScript.</p>
 
---------> FOR loop:
+    <table border = "1"> <!--remove styling when CSS is added -->
+      <tr>
+        <th>Looping construct</th>
+        <th>Ruby</th>
+        <th>JavaScript</th>
+      </tr>
 
-var cities = ["Melbourne", "Amman", "Helsinki", "NYC", "Chicago", "Denver", "London", "Dublin"];
+      <tr>
+        <td>Loop</td>
+        <td>
+          <h2></h2>
+          Loop:
+          <xmp>
+i = 20
+loop do
+  i -= 1
 
+  print "#{i}"
+  break if i <= 0
+end
+</xmp>
+        </td>
+
+        <td>
+          <h2>While (true)</h2>
+        </td>
+      </tr>
+
+      <tr>
+        <td>While/Until</td>
+        <td>
+          While
+          <xmp>
+counter = 1
+while counter < 11
+  puts counter
+  counter += 1
+end
+</xmp>
+<!-- I like the example above better.  Thoughts?
 <xmp>
-for (var i = 0; i < cities.length; i++) {
-    console.log("I would like to visit " + cities[i]);
-}
+$i = 0
+$num = 5
+begin
+   puts("Inside the loop i = #$i" )
+   $i +=1
+end while $i < $num
+</xmp> -->
+
+Until:
+<xmp>
+counter = 1
+
+until counter > 10
+  puts counter
+  counter += 1
+end
 </xmp>
 
---------> FOR...IN loop:
+<!-- ((((((or this one)))))):
 
 <xmp>
-var myObj = {a: 1, b: 2, c: 3}, myKeys = [];
- 
-for (var property in myObj) {
-    myKeys.push(property);
-}
- 
-myKeys; //['a','b','c'];
+$i = 0
+$num = 5
+begin
+   puts("Inside the loop i = #$i" )
+   $i +=1;
+end until $i > $num
+</xmp> -->
+        </td>
 
+        <td>
+          <h2>While</h2>
+          <xmp>
+          var loops = 0
+
+          var loop = function(){
+            while(loops < 3){
+            console.log("Look at me, I'm looping!")
+            loops++;  
+              
+            }
+          };
+
+          loop();
+          </xmp>
+
+          Do...while:
+          <xmp>
+          do {
+             i += 1;
+             document.write(i);
+          } while (i < 5);
+
+        </xmp>
+        </td>
+      </tr>
+
+      <tr>
+        <td>For</td>
+        <td>
+          <h2>For</h2>
+          <xmp>
+for num in 1..20
+  puts num
+end
 </xmp>
 
-(((Or we could use this example for the for/in loop instead:)))
+<!-- In this case, I think either example is fine.
+((((((or))))))
 
 <xmp>
-	var arr = ['a','b','c'], indexes = [];
+friends = [:cat, :dog, :mouse, :zebra, :elephant]
+
+for i in friends
+  puts "I love my #{i}"
+end
+</xmp> -->
+        </td>
+
+        <td>
+          <h2>For/For...in</h2>
+            For:
+            <xmp>
+            var cities = ["Melbourne", "Amman", "Helsinki", "NYC", "Chicago", "Denver", "London", "Dublin"];
+
+            
+            for (var i = 0; i < cities.length; i++) {
+                console.log("I would like to visit " + cities[i]);
+            }
+            </xmp>
+
+            For...in
+
+            <xmp>
+            var myObj = {a: 1, b: 2, c: 3}, myKeys = [];
+             
+            for (var property in myObj) {
+                myKeys.push(property);
+            }
+             
+            myKeys; //['a','b','c'];
+
+            </xmp>
+
+<!-- (((Or we could use this example for the for/in loop instead:))) => I like the above example better because it's simpler.  If you agree, delete this comment and its contents.
+
+<xmp>
+  var arr = ['a','b','c'], indexes = [];
 Array.prototype.each = function() {/*blah*/};
  
 for (var index in arr) {
@@ -47,112 +170,11 @@ for (var index in arr) {
  
 indexes; //["0", "1", "2"] 
 
-</xmp>
+</xmp> -->
+        </td>
+      </tr>
+    </table>
 
---------> WHILE loop:
-<xmp>
-	var loops = 0
-
-var loop = function(){
-	while(loops < 3){
-	console.log("Look at me, I'm looping!")
-	loops++;	
-    
-	}
-};
-
-loop();
-</xmp>
-
----------> DO/WHILE loop (kind of the same thing as while, but different syntax):
-
-<xmp>
-	do {
-   i += 1;
-   document.write(i);
-} while (i < 5);
-
-</xmp>
-
-
-------------------------------------------------------------------------------------------- 
-I don't think there's an "until" loop in JS (couldn't find documentation for one, anyway), and I don't think there's a "loop do" in JS either. Those were the only kinds of looping I could find. Let me know if you find something different.
-
--------------------------------------------------------------------------------------------
-
-***************** RUBY LOOPING:
-
-----------> WHILE loop:
-
-<xmp>
-counter = 1
-while counter < 11
-  puts counter
-  counter += 1
-end
-</xmp>
-
-((((((or this one)))))):
-
-<xmp>
-$i = 0
-$num = 5
-begin
-   puts("Inside the loop i = #$i" )
-   $i +=1
-end while $i < $num
-</xmp>
-
------------> UNTIL loop:
-
-<xmp>
-counter = 1
-
-until counter > 10
-  puts counter
-  counter += 1
-end
-</xmp>
-
-((((((or this one)))))):
-
-<xmp>
-$i = 0
-$num = 5
-begin
-   puts("Inside the loop i = #$i" )
-   $i +=1;
-end until $i > $num
-</xmp>
-
------------> LOOP DO loop:
-
-<xmp>
-i = 20
-loop do
-  i -= 1
-  print "#{i}"
-  break if i <= 0
-end
-</xmp>
-
-------------> FOR loop:
-
-<xmp>
-for num in 1..20
-  puts num
-end
-</xmp>
-
-((((((or))))))
-
-<xmp>
-friends = [:cat, :dog, :mouse, :zebra, :elephant]
-
-for i in friends
-	puts "I love my #{i}"
-end
-</xmp>
 
   </body>
 </html>
