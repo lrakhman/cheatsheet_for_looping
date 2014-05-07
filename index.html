@@ -1,0 +1,55 @@
+***************** JAVASCRIPT:
+
+FOR loop:
+
+var cities = ["Melbourne", "Amman", "Helsinki", "NYC", "Chicago", "Denver", "London", "Dublin"];
+
+<xmp>
+for (var i = 0; i < cities.length; i++) {
+    console.log("I would like to visit " + cities[i]);
+}
+</xmp>
+
+FOR...IN loop:
+
+<xmp>
+var myObj = {a: 1, b: 2, c: 3}, myKeys = [];
+ 
+for (var property in myObj) {
+    myKeys.push(property);
+}
+ 
+myKeys; //['a','b','c'];
+
+</xmp>
+
+(((Or we could use this example for the for/in loop instead:)))
+
+<xmp>
+	var arr = ['a','b','c'], indexes = [];
+Array.prototype.each = function() {/*blah*/};
+ 
+for (var index in arr) {
+    if (arr.hasOwnProperty(index)) {
+        indexes.push(index);
+    }   
+}
+ 
+indexes; //["0", "1", "2"] 
+
+</xmp>
+
+WHILE loop:
+<xmp>
+	var loops = 0
+
+var loop = function(){
+	while(loops < 3){
+	console.log("Look at me, I'm looping!")
+	loops++;	
+    
+	}
+};
+
+loop();
+</xmp>
