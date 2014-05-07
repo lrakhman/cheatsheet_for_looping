@@ -90,6 +90,17 @@ while counter < 11
 end
 </xmp>
 
+((((((or this one)))))):
+
+<xmp>
+$i = 0
+$num = 5
+begin
+   puts("Inside the loop i = #$i" )
+   $i +=1
+end while $i < $num
+</xmp>
+
 -----------> UNTIL loop:
 
 <xmp>
@@ -100,5 +111,55 @@ until counter > 10
   counter += 1
 end
 </xmp>
+
+((((((or this one)))))):
+
+<xmp>
+$i = 0
+$num = 5
+begin
+   puts("Inside the loop i = #$i" )
+   $i +=1;
+end until $i > $num
+</xmp>
+
+-----------> LOOP DO loop:
+
+<xmp>
+i = 20
+loop do
+  i -= 1
+  print "#{i}"
+  break if i <= 0
+end
+</xmp>
+
+------------> FOR loop:
+
+<xmp>
+for num in 1..20
+  puts num
+end
+</xmp>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </body>
 </html>
