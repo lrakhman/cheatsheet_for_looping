@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
     <title>Cheatsheet for Looping in Ruby vs. JavaScript</title>
    
   </head>
@@ -10,20 +11,20 @@
   <body>
 
     <h1>Looping in Ruby &amp; JavaScript</h1>
-    <p style="text-align: center; font-size: 20px;">Below is a comparison of the different looping constructs available in Ruby and JavaScript.</p>
+    <p style="text-align: center; font-size: 20px; color: #fff; text-shadow: black 0.1em 0.1em 0.2em;">Below is a comparison of the different looping constructs available in Ruby and JavaScript.</p>
 
     <table> <!--remove styling when CSS is added -->
       <tr>
-        <th>Looping Construct</th>
+        <!-- <th>Looping Construct</th> -->
         <th>Ruby</th>
         <th>JavaScript</th>
       </tr>
 
       <tr>
-        <td style="font-size: 30px;">Loop</td>
+        <!-- <td style="font-size: 30px; font-family: Garamond; font-weight: bold;">Loop</td> -->
         <td>
-          <h2></h2>
-          <p>Ruby has a basic "loop".  An explicit "break" must be added to prevent an infinite loop.<br /><br />
+          <h2>LOOP DO</h2>
+          <p>Ruby has a basic "loop". An explicit "break" must be added to prevent an infinite loop.<br /><br />
 
           EXAMPLE:</p>
           <pre>i = 20
@@ -36,6 +37,7 @@ end
         </td>
 
         <td>
+           <h2>LOOP DON'T</h2>
           <p>JavaScript does not have a basic "loop" construct, but the same result can be achieved with a "while(true)" loop.<br /><br />
 
           EXAMPLE:</p>
@@ -52,9 +54,11 @@ while( true ) {
       </tr>
 
       <tr>
-        <td style="font-size:30px;">While/
-          Until</td>
+        <!-- <td style="font-size:30px; font-family: Garamond; font-weight: bold;">While/
+          Until</td> -->
         <td>
+          <h2>WHILE/UNTIL</h2>
+
           <p>Ruby has both a "while" loop and an "until" loop.  Logically, "while(true)" is equivalent to "until(false)".  Below are some examples.<br /><br />
 
           'WHILE' EXAMPLE #1:</p>
@@ -95,6 +99,8 @@ end until i > num
         </td>
 
         <td>
+          <h2>WHILE, NOT UNTIL</h2>
+
           <p>JavaScript has a "while" loop but no "until" loop.  However, "until" is logically equivalent to "while(false)", so "until" loops can easily be imitated in JavaScript.<br /><br />
 
           'WHILE' EXAMPLE #1:</p>
@@ -142,8 +148,10 @@ do {
       </tr>
 
       <tr>
-        <td style="font-size:30px;">For</td>
+        <!-- <td style="font-size:30px; font-family: Garamond; font-weight: bold;">For</td> -->
         <td>
+          <h2>FOR</h2>
+
           <p>Ruby has a basic "for" loop that is used with collections (ranges, array, hashes).<br /><br />
           FOR EXAMPLE:</p>
           <pre>for num in 1..20
@@ -164,6 +172,8 @@ end
         </td>
 
         <td>
+          <h2>FOR and FOR..IN</h2>
+
           <p>JavaScript has two types of "for" loops: a basic "for" loop with collections, like Ruby's "for" loop, and a "for...in" loop that is used to loop through properties of objects.<br /><br />
             'FOR' EXAMPLE:</p>
             <pre>for (var num = 1; num < 21; i++) {
