@@ -1,7 +1,56 @@
+/*To reset browser's css:*/
+
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*My own css:*/
+
 body {
-	background-color: #EEE9E9
+	background-color: #7DD4C8;
 }
 
 h1 {
 	text-align: center;
+	color: #fff;
+	font-size: 70px;
+	font-family: Garamond; 
+	text-shadow: black 0.05em 0.05em 0.1em;
+
 }
+
+p {
+	margin: 2%;
+	font-size: 18px;
+}
+
+th {
+	font-size: 30px;
+	font-family: Garamond;
+}
+
+table, th, td {
+  color: #333;
+  border: 2px solid #61a2a2;
+}
+
+th, td{
+	margin: 1.5%;
+}
+
+pre {
+	margin: 6%;
+	font-size: 16px;
+}
+
+
+

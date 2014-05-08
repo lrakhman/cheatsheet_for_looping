@@ -9,37 +9,37 @@
 
   <body>
 
-    <h1>Looping in Ruby and JavaScript</h1>
-    <p style="text-align: center">Below is a comparison of the different looping constructs available in Ruby and JavaScript.</p>
+    <h1>Looping in Ruby &amp; JavaScript</h1>
+    <p style="text-align: center; font-size: 20px;">Below is a comparison of the different looping constructs available in Ruby and JavaScript.</p>
 
-    <table border = "1"> <!--remove styling when CSS is added -->
+    <table> <!--remove styling when CSS is added -->
       <tr>
-        <th>Looping construct</th>
+        <th>Looping Construct</th>
         <th>Ruby</th>
         <th>JavaScript</th>
       </tr>
 
       <tr>
-        <td>Loop</td>
+        <td style="font-size: 30px;">Loop</td>
         <td>
           <h2></h2>
-          <p>Ruby has a basic "loop".  An explicit "break" must be added to prevent an infinite loop.</p>
+          <p>Ruby has a basic "loop".  An explicit "break" must be added to prevent an infinite loop.<br /><br />
 
-          Example:
-          <xmp>i = 20
+          EXAMPLE:</p>
+          <pre>i = 20
 loop do
   print i
   break if i <= 0
   i -= 1
 end
-</xmp>
+</pre>
         </td>
 
         <td>
-          <p>JavaScript does not have a basic "loop" construct, but the same result can be achieved with a "while(true)" loop.</p>
+          <p>JavaScript does not have a basic "loop" construct, but the same result can be achieved with a "while(true)" loop.<br /><br />
 
-          Example:
-                    <xmp>var i = 20;
+          EXAMPLE:</p>
+                    <pre>var i = 20;
 while( true ) {
   console.log(i)
   if (i <= 0) {
@@ -47,70 +47,72 @@ while( true ) {
   }
   i -= 1;
 }
-</xmp>
+</pre>
         </td>
       </tr>
 
       <tr>
-        <td>While/Until</td>
+        <td style="font-size:30px;">While/
+          Until</td>
         <td>
-          <p>Ruby has both a "while" loop and an "until" loop.  Logically, "while(true)" is equivalent to "until(false)".  Below are some examples.</p>
+          <p>Ruby has both a "while" loop and an "until" loop.  Logically, "while(true)" is equivalent to "until(false)".  Below are some examples.<br /><br />
 
-          While example #1:
-          <xmp>counter = 1
+          'WHILE' EXAMPLE #1:</p>
+          <pre>counter = 1
 while counter < 11
   puts counter
   counter += 1
 end
-</xmp>
+</pre>
 
-Until example #1:
-<xmp>counter = 1
+<p>'UNTIL' EXAMPLE #1:</p>
+<pre>counter = 1
 until counter > 10
   puts counter
   counter += 1
 end
-</xmp>
+</pre>
 
-While example #2:
-<xmp>i = 0
+<p>'WHILE' EXAMPLE #2:</p>
+<pre>i = 0
 num = 5
 begin
    puts("Inside the loop i = #{i}" )
    i +=1
 end while i <= num
-</xmp>
+</pre>
 
 
-Until example #2:
-<xmp>i = 0
+<p>'UNTIL' EXAMPLE #2:</p>
+<pre>i = 0
 num = 5
 begin
    puts("Inside the loop i = #{i}" )
    i +=1;
 end until i > num
-</xmp>
+</pre>
+
         </td>
 
         <td>
-          <p>JavaScript has a "while" loop but no "until" loop.  However, "until" is logically equivalent to "while(false)", so "until" loops can easily be imitated in JavaScript.</p>
+          <p>JavaScript has a "while" loop but no "until" loop.  However, "until" is logically equivalent to "while(false)", so "until" loops can easily be imitated in JavaScript.<br /><br />
 
-          While example #1:
-          <xmp>var counter = 1
+          'WHILE' EXAMPLE #1:</p>
+          <pre>var counter = 1
 while (counter < 11) {
   console.log(counter);
   counter += 1;
 }
-          </xmp>
+          </pre>
 
-          While example #2:
-          <xmp>var i = 0;
+          <p>'WHILE' EXAMPLE #2:</p>
+          <pre>var i = 0;
 var num = 5;
 do {
   console.log("Inside the loop i = " + i);
   i += 1;
 } while (i <= num);
-          </xmp>
+          </pre>
 
 
           <!-- Note: I included different examples so the code would do the same thing as the examples in the Ruby section.  Thoughts?
@@ -140,14 +142,14 @@ do {
       </tr>
 
       <tr>
-        <td>For</td>
+        <td style="font-size:30px;">For</td>
         <td>
-          <p>Ruby has a basic "for" loop that is used with collections (ranges, array, hashes).</p>
-          For example:
-          <xmp>for num in 1..20
+          <p>Ruby has a basic "for" loop that is used with collections (ranges, array, hashes).<br /><br />
+          FOR EXAMPLE:</p>
+          <pre>for num in 1..20
   puts num
 end
-</xmp>
+</pre>
 
 <!-- In this case, I think either example is fine, but we don't need both.
 ((((((or))))))
@@ -162,23 +164,23 @@ end
         </td>
 
         <td>
-          <p>JavaScript has two types of "for" loops: a basic "for" loop with collections, like Ruby's "for" loop, and a "for...in" loop that is used to loop through properties of objects.</p>
-            For example:
-            <xmp>for (var num = 1; num < 21; i++) {
+          <p>JavaScript has two types of "for" loops: a basic "for" loop with collections, like Ruby's "for" loop, and a "for...in" loop that is used to loop through properties of objects.<br /><br />
+            'FOR' EXAMPLE:</p>
+            <pre>for (var num = 1; num < 21; i++) {
     console.log(num);
 }
-            </xmp>
+            </pre>
 
-            For...in example:
+            <p>'FOR...IN' EXAMPLE:</p>
 
-            <xmp>var myObj = {a: 1, b: 2, c: 3}, myKeys = [];
+            <pre>var myObj = {a: 1, b: 2, c: 3}, myKeys = [];
              
 for (var property in myObj) {
     myKeys.push(property);
 }
  
 myKeys; //['a','b','c']; 
-            </xmp><!-- do we need the second part of the last line? -->
+            </pre><!-- do we need the second part of the last line? -->
 
 <!-- (((Or we could use this example for the for/in loop instead:))) => I like the above example better because it's simpler, which allows the reader to focus on the actual looping construct.  If you agree, delete this comment and its contents.
 
