@@ -43,13 +43,14 @@ table, th, td {
   border: 5px solid #fff;
   padding-top: 2%;
   padding-bottom: 2%;
-  background-color: gray;
-  margin: 80px;
+  background-color: rgb(247, 247, 247);
+  margin: 80px 150px;
 }
 
 th {
 	 font-weight: bold;
-	 color: #fff;
+	 color: #7DD4C8;
+	 text-shadow: black 0.05em 0.05em 0.1em;
 	 font-size: 50px;
 }
 
@@ -61,7 +62,8 @@ pre {
 
 h2 {
 	text-align: center;
-	color: #fff;
+	color: #7DD4C8;
+	text-shadow: black 0.05em 0.05em 0.1em;
 	font-family:'Vollkorn';
 }
 
