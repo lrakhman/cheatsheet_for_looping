@@ -13,7 +13,7 @@
     <h1>Looping in Ruby &amp; JavaScript</h1>
     <p style="text-align: center; font-size: 20px; color: #fff; text-shadow: black 0.1em 0.1em 0.2em;">Below is a comparison of the different looping constructs available in Ruby and JavaScript.</p>
 
-    <table> <!--remove styling when CSS is added -->
+    <table>
       <tr>
         <!-- <th>Looping Construct</th> -->
         <th>Ruby</th>
@@ -21,7 +21,6 @@
       </tr>
 
       <tr>
-        <!-- <td style="font-size: 30px; font-family: Garamond; font-weight: bold;">Loop</td> -->
         <td>
           <h2>LOOP DO</h2>
           <p>Ruby has a basic "loop". An explicit "break" must be added to prevent an infinite loop.<br /><br />
@@ -54,8 +53,6 @@ while( true ) {
       </tr>
 
       <tr>
-        <!-- <td style="font-size:30px; font-family: Garamond; font-weight: bold;">While/
-          Until</td> -->
         <td>
           <h2>WHILE / UNTIL</h2>
 
@@ -95,7 +92,6 @@ begin
    i +=1;
 end until i > num
 </pre>
-
         </td>
 
         <td>
@@ -119,36 +115,10 @@ do {
   i += 1;
 } while (i <= num);
           </pre>
-
-
-          <!-- Note: I included different examples so the code would do the same thing as the examples in the Ruby section.  Thoughts?
-          <xmp>
-          var loops = 0
-
-          var loop = function(){
-            while(loops < 3){
-            console.log("Look at me, I'm looping!")
-            loops++;  
-              
-            }
-          };
-
-          loop();
-          </xmp>
-
-          Do...while:
-          <xmp>
-          do {
-             i += 1;
-             document.write(i);
-          } while (i < 5); 
-
-        </xmp> -->
         </td>
       </tr>
 
       <tr>
-        <!-- <td style="font-size:30px; font-family: Garamond; font-weight: bold;">For</td> -->
         <td>
           <h2>FOR</h2>
 
@@ -158,23 +128,12 @@ do {
   puts num
 end
 </pre>
-
-<!-- In this case, I think either example is fine, but we don't need both.
-((((((or))))))
-
-<xmp>
-friends = [:cat, :dog, :mouse, :zebra, :elephant]
-
-for i in friends
-  puts "I love my #{i}"
-end
-</xmp> -->
         </td>
 
         <td>
           <h2>FOR and FOR..IN</h2>
 
-          <p>JavaScript has two types of "for" loops: a basic "for" loop with collections, like Ruby's "for" loop, and a "for...in" loop that is used to loop through properties of objects.<br /><br />
+          <p>JavaScript has two types of "for" loops: a basic "for" loop that is used with collections, like Ruby's "for" loop, and a "for...in" loop that is used to loop through properties of objects.<br /><br />
             'FOR' EXAMPLE:</p>
             <pre>for (var num = 1; num < 21; i++) {
     console.log(num);
@@ -183,7 +142,8 @@ end
 
             <p>'FOR...IN' EXAMPLE:</p>
 
-            <pre>var myObj = {a: 1, b: 2, c: 3}, myKeys = [];
+            <pre>var myObj = {a: 1, b: 2, c: 3};
+var myKeys = [];
              
 for (var property in myObj) {
     myKeys.push(property);
@@ -191,22 +151,6 @@ for (var property in myObj) {
  
 myKeys; //['a','b','c']; 
             </pre><!-- do we need the second part of the last line? -->
-
-<!-- (((Or we could use this example for the for/in loop instead:))) => I like the above example better because it's simpler, which allows the reader to focus on the actual looping construct.  If you agree, delete this comment and its contents.
-
-<xmp>
-  var arr = ['a','b','c'], indexes = [];
-Array.prototype.each = function() {/*blah*/};
- 
-for (var index in arr) {
-    if (arr.hasOwnProperty(index)) {
-        indexes.push(index);
-    }   
-}
- 
-indexes; //["0", "1", "2"] 
-
-</xmp> -->
         </td>
       </tr>
     </table>

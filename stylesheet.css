@@ -11,12 +11,16 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  width: 850px;
+  table-layout: fixed;
 }
 
 /*My own css:*/
 
 body {
 	background-color: #7DD4C8;
+	max-width: 1000px;
+	margin: auto;
 }
 
 h1 {
@@ -33,31 +37,29 @@ p {
 	font-size: 18px;
 }
 
-th {
-	font-size: 30px;
-	font-family: Garamond;
-}
-
 table, th, td {
   color: black; 
   border: 5px solid #fff;
   padding-top: 2%;
   padding-bottom: 2%;
   background-color: rgb(247, 247, 247);
-  margin: 80px 150px;
+  margin: 0 auto 30px auto;
 }
 
 th {
+	font-family: Garamond;
 	 font-weight: bold;
 	 color: #7DD4C8;
 	 text-shadow: black 0.05em 0.05em 0.1em;
 	 font-size: 50px;
+	 width: 45%;
+	 overflow: hidden;
 }
 
 
 pre {
 	margin: 6%;
-	font-size: 16px;
+	font-size: 15px;
 }
 
 h2 {
